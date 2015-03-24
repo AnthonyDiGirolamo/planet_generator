@@ -9,9 +9,14 @@ export default DS.Model.extend({
   color_count: function(){
     return this.get('colors').split(/\s+/).length;
   }.property('colors'),
-  gradient_css: function(){
-    var g = tinygradient(_.map(_.zip(this.get("colors").split(' '), this.get("color_indexes").split(' ')), function(a){ return {"color": a[0], "pos": parseInt(a[1]) / 255.0} }));
 
+  gradient_css: function(){
+    var g = tinygradient(
+      _.zip( this.get("colors").split(' '), this.get("color_indexes").split(' ') )
+      .map( function(a){
+        return {"color": a[0], "pos": parseInt(a[1]) / 255.0};
+      })
+    );
     return 'background:' + g.css() + ';height:48px;width:100%;';
   }.property('colors', 'color_indexes')
 });
