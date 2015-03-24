@@ -46,7 +46,10 @@ module.exports = function(environment) {
      'default-src': "'none'",
      'img-src': "'self'",
      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
-     'media-src': "'self'"
+     'media-src': "'self'",
+     'script-src': "'self' 'unsafe-eval' http://127.0.0.1:35729 ",
+     'font-src': "'self'",
+     'connect-src': "'self' ws://127.0.0.1:35729/livereload ",
    }
 
   return ENV;

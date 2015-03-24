@@ -12,6 +12,6 @@ export default DS.Model.extend({
   gradient_css: function(){
     var g = tinygradient(_.map(_.zip(this.get("colors").split(' '), this.get("color_indexes").split(' ')), function(a){ return {"color": a[0], "pos": parseInt(a[1]) / 255.0} }));
 
-    return 'background:' + g.css() + ';height:48px;width:100%;'
+    return 'background:' + g.css() + ';height:48px;width:100%;';
   }.property('colors', 'color_indexes')
 });
