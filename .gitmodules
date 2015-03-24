@@ -1,0 +1,3 @@
+[submodule "vendor/noisejs"]
+	path = vendor/noisejs
+	url = https://github.com/josephg/noisejs.git
