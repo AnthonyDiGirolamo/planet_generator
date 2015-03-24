@@ -1,21 +1,16 @@
-<h2>Color Maps</h2>
-
-{{#each colormap in model}}
 <ul>
   <p>
-  {{input type="text" value=colormap.name size="50"}}
-  {{input type="text" value=colormap.color_indexes size="50"}}
-  {{input type="text" value=colormap.colors size="50"}}
+  {{input type="text" value=name size="50"}}
+  {{input type="text" value=color_indexes size="50"}}
+  {{input type="text" value=colors size="50"}}
   </p>
 
-  <li>{{colormap.name}}</li>
-  <li>{{colormap.color_indexes}}</li>
-  <li>{{colormap.colors}}</li>
-  <li>{{colormap.color_count}}</li>
+  <li>{{name}}</li>
+  <li>{{color_indexes}}</li>
+  <li>{{colors}}</li>
+  <li>{{color_count}}</li>
   <li>
-    <div {{bind-attr style=colormap.gradient_css}}></div>
+    <div {{bind-attr style=gradient_css}}></div>
   </li>
 
 </ul>
-{{/each}}
-

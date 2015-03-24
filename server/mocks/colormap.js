@@ -26,7 +26,10 @@ module.exports = function(app) {
   colormapRouter.get('/:id', function(req, res) {
     res.send({
       'colormap': {
-        id: req.params.id
+        id: req.params.id,
+        name:          "Terran",
+        color_indexes: "0 15 70 80 90 200 233 255",
+        colors:        "#273E5A #324858 #74B8A4 #8EA3A4 #476151 #958A73 #C7C596 #DCC511"
       }
     });
   });

@@ -6,7 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('colormap', function() {});
+  this.resource('colormaps', { path: '/colormaps' }, function() {});
+  this.resource('colormap', { path: '/colormap/:colormap_id' }, function() {});
   this.resource('heightmap', function() {});
 });
 

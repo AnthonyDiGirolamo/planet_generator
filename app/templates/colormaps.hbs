@@ -1,0 +1,7 @@
+<h2>Color Maps</h2>
+
+{{#each cmap in model}}
+  {{#link-to 'colormap' cmap}}{{cmap.name}}{{/link-to}}
+  <div {{bind-attr style=cmap.gradient_css}}></div>
+{{/each}}
+
