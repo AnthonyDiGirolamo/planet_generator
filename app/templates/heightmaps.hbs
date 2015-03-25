@@ -1,6 +1,6 @@
 <h2>Height Maps</h2>
 
 {{#each heightmap in model}}
-  <li>{{heightmap.name}}</li>
+  {{#link-to 'heightmap' heightmap}}{{heightmap.name}}{{/link-to}}
 {{/each}}
 

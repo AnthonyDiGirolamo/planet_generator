@@ -2,9 +2,9 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name:          DS.attr('string'),
+  heightmap:     DS.hasMany('heightmap', {async: true}),
   colors:        DS.attr('string'),
   color_indexes: DS.attr('string'),
-  heightmap:     DS.belongsTo('heightmap'),
   noise_octaves: DS.attr('number'),
   noise_zoom:    DS.attr('number'),
 

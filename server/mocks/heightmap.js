@@ -5,7 +5,8 @@ module.exports = function(app) {
     "1": {
       id:       "1",
       name:     "Test Planet 1",
-      map_type: 'sphere',
+      map_type: "sphere",
+      colormap: "1",
       width:    1024,
       height:   1024,
     },
@@ -22,7 +23,15 @@ module.exports = function(app) {
   });
 
   heightmapRouter.get('/:id', function(req, res) {
-    res.send({ 'heightmap': height_maps[req.params.id] });
+    res.send({ 'heightmap': height_maps[req.params.id],
+      'colormap': [{
+      id:            "1",
+      name:          "Terran",
+      color_indexes: "0 15 70 80 90 200 233 255",
+      colors:        "#273E5A #324858 #74B8A4 #8EA3A4 #476151 #958A73 #C7C596 #DCC5AD",
+      noise_octaves: 6.0,
+      noise_zoom:    1.0,}]
+    });
   });
 
   heightmapRouter.put('/:id', function(req, res) {
