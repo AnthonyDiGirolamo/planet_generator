@@ -20,5 +20,6 @@ var app = new EmberApp();
 app.import('bower_components/underscore/underscore.js');
 app.import('bower_components/tinycolor/tinycolor.js');
 app.import('bower_components/tinygradient/tinygradient.js');
+app.import('vendor/noisejs/perlin.js');
 
 module.exports = app.toTree();

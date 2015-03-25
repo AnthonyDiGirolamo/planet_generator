@@ -26,6 +26,6 @@ export default DS.Model.extend({
 
   gradient_rgb: function(){
     var g = tinygradient(this.get('color_json'));
-    return console.log(g.rgb(256));
+    return g.rgb(256);
   }.property('color_json')
 });

@@ -2,7 +2,6 @@
 
 <p> Color Map: {{#link-to 'colormap' colormap}}{{colormap.name}}{{/link-to}} </p>
 
-<p>{{canvas_sphere}}</p>
-
-<canvas></canvas>
+<!-- <canvas {{bind-attr width=width height=height}}></canvas> -->
+<div id="canvas-container">{{canvas-sphere colormap width height}}</div>
 
