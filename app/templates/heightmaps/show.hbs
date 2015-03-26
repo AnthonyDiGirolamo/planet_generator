@@ -46,7 +46,9 @@
         {{canvas-spheremap width=model.width
                            height=model.height
                            seed=model.seed
-                           colormap=model.colormap.color_json}}
+                           octaves=model.colormap.noise_octaves
+                           scale=model.colormap.noise_zoom
+                           color_json=model.colormap.color_json}}
       </div>
       {{/if}}
     </div>
