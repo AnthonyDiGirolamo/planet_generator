@@ -1,17 +1,21 @@
-<h3>{{name}}</h3>
+<div class="header">
+  <h1>{{name}}</h1>
+</div>
 
-<ul>
-  <p>
-  {{input type="text" value=name size="50"}}
-  {{input type="text" value=color_indexes size="50"}}
-  {{input type="text" value=colors size="50"}}
-  </p>
+<div class="content">
+  <ul>
+    <p>
+      {{input type="text" value=name size="50"}}
+      {{input type="text" value=color_indexes size="50"}}
+      {{input type="text" value=colors size="50"}}
+    </p>
 
-  <li>{{color_indexes}}</li>
-  <li>{{colors}}</li>
-  <li>{{color_count}}</li>
-  <li>
-    <div {{bind-attr style=gradient_css}}></div>
-  </li>
+    <li>{{color_indexes}}</li>
+    <li>{{colors}}</li>
+    <li>{{color_count}}</li>
+    <li>
+      <div {{bind-attr style=gradient_css}}></div>
+    </li>
 
-</ul>
+  </ul>
+</div>

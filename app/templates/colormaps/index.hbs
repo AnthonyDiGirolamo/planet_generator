@@ -1,7 +1,18 @@
-<h3>Index</h3>
 
-{{#each cmap in model}}
-  {{link-to cmap.name 'colormaps.show' cmap}}
-  <div {{bind-attr style=cmap.gradient_css}}></div>
-{{/each}}
+<div class='content'>
+  <h3>Colormaps</h3>
 
+  <div class='pure-g'>
+    {{#each cmap in model}}
+    <div class='pure-u-1 pure-u-md-1-1' >
+      <div class='s-box'>
+        <div class='center m-box' {{bind-attr style=cmap.gradient_css}}>
+          {{link-to cmap.name 'colormaps.show' cmap class='pure-button'}}
+        </div>
+      </div>
+    </div>
+    <!-- <div class='pure-u-1 pure-u-md-4-5' > -->
+    <!-- </div> -->
+    {{/each}}
+  </div>
+</div>

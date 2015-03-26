@@ -1,6 +1,7 @@
-<h3>Index</h3>
+<div class='content'>
+  <h3>Index</h3>
 
-{{#each heightmap in model}}
-  {{#link-to 'heightmaps.show' heightmap}}{{heightmap.name}}{{/link-to}}
-{{/each}}
-
+  {{#each heightmap in model}}
+    {{#link-to 'heightmaps.show' heightmap}}{{heightmap.name}}{{/link-to}}
+  {{/each}}
+</div>

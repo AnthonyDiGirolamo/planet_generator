@@ -22,4 +22,7 @@ app.import('bower_components/tinycolor/tinycolor.js');
 app.import('bower_components/tinygradient/tinygradient.js');
 app.import('vendor/noisejs/perlin.js');
 
+app.import('vendor/pure-min.css');
+app.import('vendor/grids-responsive-min.css');
+
 module.exports = app.toTree();

@@ -1,7 +1,15 @@
-{{partial "partials/header"}}
+<div id="layout">
+  <!-- Menu toggle -->
+  <a href="#menu" id="menuLink" class="menu-link">
+    <!-- Hamburger icon -->
+    <span></span>
+  </a>
 
-<div class="row">
-  <div>
+  <div id="menu">
+    {{partial "partials/menu"}}
+  </div>
+
+  <div id="main">
     {{outlet}}
   </div>
 </div>
