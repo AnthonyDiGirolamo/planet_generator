@@ -1,11 +1,47 @@
 <div class='header'>
-  <h2>{{name}}</h2>
+  <h2>{{model.name}}</h2>
 </div>
 
 <div class='content'>
 
-  <p> Color Map: {{#link-to 'colormaps.show' colormap}}{{colormap.name}}{{/link-to}} </p>
-  <p>Seed: {{input type="text" value=seed size="50"}}</p>
+  <form action='' class='pure-form pure-form-aligned' method='post'>
+    <fieldset>
+      <div class='pure-control-group'>
+        <label for='name'>Name</label>
+        {{input id='name' type="text" value=model.name}}
+      </div>
+      <div class='pure-control-group'>
+        <label for='seed'>Seed</label>
+        {{input id='seed' type="text" value=model.seed}}
+      </div>
+      <div class='pure-control-group'>
+        <label for='width'>width</label>
+        {{input id='width' type="text" value=model.width}}
+      </div>
+      <div class='pure-control-group'>
+        <label for='height'>height</label>
+        {{input id='height' type="text" value=model.height}}
+      </div>
+      <div class='pure-control-group'>
+        <label for='colormap'>Color Map</label>
+        {{#link-to 'colormaps.show' model.colormap}}
+        {{model.colormap.name}}
+        {{/link-to}}
+        {{view 'select' id=colormap
+                        contentBinding="colormaps"
+                        optionValuePath="content.id"
+                        optionLabelPath="content.name"
+                        selection=model.colormap
+                        prompt="Change Color Map"}}
+      </div>
 
-  <div id="canvas-container">{{canvas-spheremap width=width height=height seed=seed colormap=colormap}}</div>
+    </fieldset>
+  </form>
+
+  <div id="canvas-container">
+    {{canvas-spheremap width=model.width
+                       height=model.height
+                       seed=model.seed
+                       colormap=model.colormap}}
+  </div>
 </div>
