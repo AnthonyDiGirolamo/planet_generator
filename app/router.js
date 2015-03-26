@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('colormaps', function() {
     this.route('show', {path: '/:colormap_id'}, function() {});
+    this.route('new');
   });
   this.resource('heightmaps', function() {
     this.route('show',  {path: '/:heightmap_id'}, function() {});
