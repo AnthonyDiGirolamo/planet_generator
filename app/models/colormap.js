@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import { gradientCSS } from '../utils/gradient-helpers';
 
 export default DS.Model.extend({
   name:          DS.attr('string'),
@@ -20,8 +21,7 @@ export default DS.Model.extend({
   }.property('colors', 'color_indexes'),
 
   gradient_css: function(){
-    var g = tinygradient(this.get('color_json'));
-    return `background:${g.css()};`;
+    return `background:${gradientCSS(this.get('color_json'))};`;
   }.property('color_json'),
 
   gradient_rgb: function(){
