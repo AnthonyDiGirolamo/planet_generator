@@ -5,6 +5,7 @@
 <div class='content'>
 
   <p> Color Map: {{#link-to 'colormaps.show' colormap}}{{colormap.name}}{{/link-to}} </p>
+  <p>Seed: {{input type="text" value=seed size="50"}}</p>
 
   <div id="canvas-container">{{canvas-spheremap width=width height=height seed=seed colormap=colormap}}</div>
 </div>

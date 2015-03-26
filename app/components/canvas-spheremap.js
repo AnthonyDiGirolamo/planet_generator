@@ -13,11 +13,13 @@ export default Ember.Component.extend({
     this.set('ctx', this.get('element').getContext('2d'));
     this.draw();
   },
+
   _empty: function(){
     var ctx = this.get('ctx');
     ctx.fillStyle = '#FFFFFF';
     ctx.fillRect(0, 0, this.get('width'), this.get('height'));
   },
+
   draw: function(){
     this._empty();
     var ctx = this.get('ctx');
@@ -45,7 +47,6 @@ export default Ember.Component.extend({
 
     ctx.putImageData(image, 0, 0);
     console.log('Rendered in ' + (end - start) + ' ms');
-
-  }
+  }.observes('seed', 'width', 'height', 'colormap'),
 
 });
