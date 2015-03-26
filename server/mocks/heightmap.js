@@ -4,7 +4,7 @@ module.exports = function(app) {
   var height_maps = {
     "1": {
       id:       "1",
-      name:     "Test Planet 1",
+      name:     "Earth",
       map_type: "sphere",
       colormap: "1",
       width:    1024,

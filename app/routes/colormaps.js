@@ -9,6 +9,12 @@ export default Ember.Route.extend({
     cancel: function(){
       console.log('- cancel action bubbled up to colormaps route');
       return true;
+    },
+    delete: function(colormap){
+      var _this = this;
+      colormap.destroyRecord().then(function(){
+        _this.transitionTo('colormaps.index');
+      });
     }
   }
 });

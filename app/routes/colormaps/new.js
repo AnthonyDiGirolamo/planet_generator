@@ -14,4 +14,10 @@ export default Ember.Route.extend({
   //     return true;
   //   }
   // }
+  deactivate: function(){
+    var model = this.modelFor('colormaps/new');
+    if (model.get('isNew')) {
+      model.destroyRecord();
+    }
+  }
 });
