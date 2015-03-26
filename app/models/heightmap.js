@@ -7,3 +7,4 @@ export default DS.Model.extend({
   height:   DS.attr('number'),
   map_type: DS.attr('string'),
 });
+
