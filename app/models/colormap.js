@@ -8,9 +8,9 @@ export default DS.Model.extend({
   noise_octaves: DS.attr('number'),
   noise_zoom:    DS.attr('number'),
 
-  color_count: function(){
+  color_count: Ember.computed('colors', function(){
     return this.get('colors').split(/\s+/).length;
-  }.property('colors'),
+  }),
 
   color_json: function(){
     return _.zip( this.get("colors").split(' '), this.get("color_indexes").split(' ') )

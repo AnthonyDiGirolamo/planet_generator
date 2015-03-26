@@ -1,7 +1,7 @@
 <h3>Index</h3>
 
 {{#each cmap in model}}
-  {{#link-to 'colormaps.show' cmap}}{{cmap.name}}{{/link-to}}
+  {{link-to cmap.name 'colormaps.show' cmap}}
   <div {{bind-attr style=cmap.gradient_css}}></div>
 {{/each}}
 
