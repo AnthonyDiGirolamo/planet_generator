@@ -22,4 +22,21 @@ app.import('bower_components/tinycolor/tinycolor.js');
 app.import('bower_components/tinygradient/tinygradient.js');
 app.import('vendor/noisejs/perlin.js');
 
+// app.import('bower_components/picnic/releases/v1.1.css');
+app.import('vendor/picnic_3+nav.min.css');
+
+app.import('vendor/fontello/fontello.css');
+app.import('vendor/fontello/font/fontello.ttf', {
+  destDir : 'font'
+});
+app.import('vendor/fontello/font/fontello.eot', {
+  destDir : 'font'
+});
+app.import('vendor/fontello/font/fontello.svg', {
+  destDir : 'font'
+});
+app.import('vendor/fontello/font/fontello.woff', {
+  destDir : 'font'
+});
+
 module.exports = app.toTree();

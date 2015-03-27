@@ -13,6 +13,7 @@
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
     "underscore": "~1.8.2",
-    "tinygradient": "~0.3.0"
+    "tinygradient": "~0.3.0",
+    "picnic": "https://github.com/picnicss/picnic.git"
   }
 }

@@ -1,0 +1,11 @@
+body {
+  display:    block;
+  color:      #333;
+  text-align: center;
+  background: #FFF;
+  margin:     80px auto;
+  width:      100%;
+}
+table {
+  width: 100%;
+}
