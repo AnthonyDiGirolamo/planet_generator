@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-import { gradientCSS } from '../utils/gradient-helpers';
+import { gradientCSS, gradientRGB } from '../utils/gradient-helpers';
 
 var ColorMap = DS.Model.extend({
   name:          DS.attr('string'),
@@ -25,8 +25,7 @@ var ColorMap = DS.Model.extend({
   }.property('color_json'),
 
   gradient_rgb: function(){
-    var g = tinygradient(this.get('color_json'));
-    return g.rgb(256);
+    return gradientRGB(this.get('color_json'));
   }.property('color_json')
 });
 

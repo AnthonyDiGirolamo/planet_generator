@@ -1,8 +1,10 @@
-<div class='content'>
+<div class='header'>
   <h2>{{name}}</h2>
+</div>
+
+<div class='content'>
 
   <p> Color Map: {{#link-to 'colormaps.show' colormap}}{{colormap.name}}{{/link-to}} </p>
 
-  <!-- <canvas {{bind-attr width=width height=height}}></canvas> -->
-  <div id="canvas-container">{{canvas-sphere colormap width height}}</div>
+  <div id="canvas-container">{{canvas-spheremap width=width height=height heightmap=model}}</div>
 </div>

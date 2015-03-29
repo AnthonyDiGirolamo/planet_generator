@@ -5,6 +5,7 @@ var HeightMap = DS.Model.extend({
   colormap: DS.belongsTo('colormap', {async: true}),
   width:    DS.attr('number'),
   height:   DS.attr('number'),
+  seed:     DS.attr('number'),
   map_type: DS.attr('string'),
 });
 
@@ -15,8 +16,9 @@ HeightMap.reopenClass({
       name:     "Earth",
       map_type: "sphere",
       colormap: "1",
-      width:    1024,
-      height:   1024,
+      width:    320,
+      height:   240,
+      seed:     123456789,
     },
   ]
 });

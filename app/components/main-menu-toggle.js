@@ -4,11 +4,12 @@ export default Ember.Component.extend({
   tagName: 'a',
   classNames: ['menu-link'],
   click: function(){
-    var layout   = window.$('#layout');
-    var menu     = window.$('#menu');
-    var menuLink = window.$(this.get('element'));
-    menu.toggleClass('active');
-    layout.toggleClass('active');
-    menuLink.toggleClass('active');
+    var layout   = window.jQuery('#layout');
+    var menu     = window.jQuery('#menu');
+    var menuLink = window.jQuery(this.get('element'));
+    var active_class = 'active';
+    menu.toggleClass(active_class);
+    layout.toggleClass(active_class);
+    menuLink.toggleClass(active_class);
   }
 });
