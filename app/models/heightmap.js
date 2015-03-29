@@ -18,7 +18,7 @@ HeightMap.reopenClass({
       colormap: "1",
       width:    320,
       height:   240,
-      seed:     123456789,
+      seed:     999,
     },
   ]
 });

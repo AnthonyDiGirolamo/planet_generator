@@ -6,5 +6,5 @@
 
   <p> Color Map: {{#link-to 'colormaps.show' colormap}}{{colormap.name}}{{/link-to}} </p>
 
-  <div id="canvas-container">{{canvas-spheremap width=width height=height heightmap=model}}</div>
+  <div id="canvas-container">{{canvas-spheremap width=width height=height seed=seed colormap=colormap}}</div>
 </div>
