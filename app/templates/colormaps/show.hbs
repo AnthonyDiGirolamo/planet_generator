@@ -1,24 +1,37 @@
 <div class="header">
-  <h1>{{name}}</h1>
+  <h2>{{name}}</h2>
 </div>
 
 <div class="content">
-  <ul>
-    <p>
-      {{input type="text" value=name size="50"}}
-      {{input type="text" value=color_indexes size="50"}}
-      {{input type="text" value=colors size="50"}}
-    </p>
+  <div class='pure-u-1 pure-u-md-1-1'>
+    <form action='' class='pure-form pure-form-stacked' method='post'>
+      <fieldset>
+        <div class='pure-control-group'>
+          <label for='name'>Name</label>
+          {{input id='name' type="text" value=name}}
+        </div>
+        <div class='pure-control-group'>
+          <label for='color_indexes'>Indexes</label>
+          {{input id='color_indexes' type="text" value=color_indexes size="50"}}
+        </div>
+        <div class='pure-control-group'>
+          <label for='colors'>Indexes</label>
+          {{input id='colors' type="text" value=colors size="50"}}
+        </div>
+      </fieldset>
+    </form>
+  </div>
 
-    <li>{{color_indexes}}</li>
-    <li>{{colors}}</li>
-    <li>{{color_count}}</li>
-    <li>
-      <div {{bind-attr style=gradient_css}}></div>
-    </li>
-    <li>
-      <a href= "#" {{action "delete" model}}>Delete</a>
-    </li>
+  <div class='pure-u-1 pure-u-md-1-1' >
+    <div class='center m-box' {{bind-attr style=gradient_css}}>
+      &nbsp;
+    </div>
+  </div>
 
-  </ul>
+  <div class='pure-u-1 pure-u-md-1-1' >
+    <p>{{color_indexes}}</p>
+    <p>{{colors}}</p>
+    <p>{{color_count}}</p>
+    <p><a href="#" {{action "delete" model}} class="pure-button button-error">Delete</a></p>
+  </div>
 </div>

@@ -36,7 +36,7 @@ export default Ember.Component.extend({
       //if (x % 100 == 0) {
       //}
       for (var y = 0; y < this.get('height'); y++) {
-        var value = Math.abs(noise.perlin2(x / 100, y / 100));
+        var value = Math.abs(noise.perlin2(x / 50, y / 50));
         value = Math.floor(value*256);
         var cell = (x + y * this.get('width')) * 4;
         data[cell] = data[cell + 1] = data[cell + 2] = value;
