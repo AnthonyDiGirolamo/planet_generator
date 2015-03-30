@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   width: 100,
   height: 100,
   seed: 1,
-  colormap: false,
+  colormap: null,
   attributeBindings: ['width', 'height'],
 
   didInsertElement: function(){
@@ -30,16 +30,20 @@ export default Ember.Component.extend({
 
     var image = ctx.createImageData(this.get('width'), this.get('height'));
     var data = image.data;
+    var colors = gradientRGB(this.get('colormap'));
     noise.seed(this.get('seed'));
     for (var x = 0; x < this.get('width'); x++) {
       //if (x % 100 == 0) {
       //}
       for (var y = 0; y < this.get('height'); y++) {
         var value = Math.abs(noise.perlin2(x / 100, y / 100));
-        value *= 256;
+        value = Math.floor(value*256);
         var cell = (x + y * this.get('width')) * 4;
         data[cell] = data[cell + 1] = data[cell + 2] = value;
         data[cell] += Math.max(0, (25 - value) * 8);
+        data[cell]   = colors[value].toRgb()["r"];
+        data[cell+1] = colors[value].toRgb()["g"];
+        data[cell+2] = colors[value].toRgb()["b"];
         data[cell + 3] = 255; // alpha.
       }
     }

@@ -49,7 +49,7 @@ ColorMap.reopenClass({
 
     {
       id:            "3",
-      name:          "jungle",
+      name:          "Jungle",
       colors:        "#1D3570 #4589C8 #3D5622 #2A4826 #346723 #1D2F12 #4B7621 #64AD16",
       color_indexes: "0 60 80 110 150 205 235 255",
       noise_octaves: 6.0,
